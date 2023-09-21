@@ -1,7 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
+import Root from './components/Root/Root';
+import Home from './components/Home/Home';
+import AppliedJobs from './components/AppliedJobs/AppliedJobs';
+import Statistics from './components/Statistics/Statistics';
+import Blog from './components/Blog/Blog';
 
 import {
   createBrowserRouter,
@@ -11,7 +15,29 @@ import {
 const router = createBrowserRouter([
   {
     path : '/',
-    element : <h1>hello world</h1>
+    element : <Root></Root>,
+    children : [
+      {
+        path : '/',
+        element : <Home></Home>
+      },
+      {
+        path : '/appliedJobs',
+        element : <AppliedJobs></AppliedJobs>
+      },
+      {
+        path : '/statistics',
+        element : <Statistics></Statistics>
+      },
+      {
+        path : '/blog',
+        element : <Blog></Blog>
+      },
+      {
+        path : '*',
+        element : <h1>404 page not found</h1>
+      }
+    ]
   }
 ])
 
