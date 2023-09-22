@@ -11,13 +11,13 @@ const Footer = () => {
         <div className='grid md:grid-cols-5 grid-cols-1 md:gap-4'>
           {/* item one start */}
           <div>
-            <h4 className='md:text-xl md:font-bold text-blue-700'><i>Career Hub</i></h4>
+            <h4 className='md:text-xl md:font-bold text-blue-700'><i>JobPortal</i></h4>
             <p className='md:text-sm text-slate-300 md:my-2'>There are many variations of passages<br/>of Lorem Ipsum , but the majority have<br/>suffered alteration in some form.</p>
             <div className='flex gap-8'>
-              <UserPlusIcon className="h-7 w-7 text-blue-500 bg-slate-300 p-1 rounded-full" />
-              <PhotoIcon className="h-7 w-7 text-blue-500 bg-slate-300 p-1 rounded-full" />
-              <MapPinIcon className="h-7 w-7 text-blue-500 bg-slate-300 p-1 rounded-full" />
-              <LinkIcon className="h-7 w-7 text-blue-500 bg-slate-300 p-1 rounded-full" />
+              <UserPlusIcon className="h-7 w-7 text-blue-500 hover:bg-blue-700 hover:text-slate-300 duration-500 bg-slate-300 p-1 rounded-full" />
+              <PhotoIcon className="h-7 w-7 text-blue-500 hover:bg-blue-700 hover:text-slate-300 duration-500 bg-slate-300 p-1 rounded-full" />
+              <MapPinIcon className="h-7 w-7 text-blue-500 hover:bg-blue-700 hover:text-slate-300 duration-500 bg-slate-300 p-1 rounded-full" />
+              <LinkIcon className="h-7 w-7 text-blue-500 hover:bg-blue-700 hover:text-slate-300 duration-500 bg-slate-300 p-1 rounded-full" />
             </div>
           </div>
           {/* item one end */}
@@ -58,6 +58,20 @@ const Footer = () => {
           </div>
           {/* item five end */}
         </div>
+        {/* divider section start */}
+        <hr className='text-slate-300 md:my-8 my-4'></hr>
+        {/* divider section end */}
+        {/* end section start */}
+        <div className='md:flex md:justify-between text-center'>
+          <div>
+            <span className='font-semibold text-base text-slate-300'><i>@2023 CareerHub. All Rights Reserved</i></span>
+          </div>
+          <div>
+            <span className='font-semibold text-base text-slate-300'><i>Power By jobPortal</i></span>
+          </div>
+          
+        </div>
+        {/* end section end */}
       </div>
       {/* footer section end */}
     </div>

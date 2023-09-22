@@ -4,9 +4,9 @@ import './Statistics.css'
 
 const Statistics = () => {
   return (
-    <div>
-      <h1>this i statistics page</h1>
-    </div>
+    <>
+      
+    </>
   );
 };
 
