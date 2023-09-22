@@ -1,8 +1,22 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Features.css';
+import { useState } from 'react';
+import Feature from '../Feature/Feature';
 
 const Features = () => {
+
+  //stores data
+  const [features, setFeatures] = useState([])
+
+  //loading data
+  useEffect(() => {
+    fetch('features.json')
+    .then((response) => response.json())
+    .then(data => setFeatures(data))
+  },[])
+
+  
   return (
     <div className='md:container md:mx-auto md:mt-8 md:mb-12'>
       {/* title section start */}
@@ -16,7 +30,7 @@ const Features = () => {
       {/* features section start */}
       <div className='grid grid-cols-1 md:grid-cols-2 md:gap-8'>
         {
-          
+          features.map((feature) => )
         }
       </div>
       {/* features section end */}
