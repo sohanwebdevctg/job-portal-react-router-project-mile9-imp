@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import './Footer.css';
+import {UserPlusIcon, PhotoIcon, MapPinIcon, LinkIcon } from '@heroicons/react/24/solid'
 
 const Footer = () => {
   return (
@@ -12,6 +13,12 @@ const Footer = () => {
           <div>
             <h4 className='md:text-xl md:font-bold text-blue-700'><i>Career Hub</i></h4>
             <p className='md:text-sm text-slate-300 md:my-2'>There are many variations of passages<br/>of Lorem Ipsum , but the majority have<br/>suffered alteration in some form.</p>
+            <div className='flex gap-8'>
+              <UserPlusIcon className="h-7 w-7 text-blue-500 bg-slate-300 p-1 rounded-full" />
+              <PhotoIcon className="h-7 w-7 text-blue-500 bg-slate-300 p-1 rounded-full" />
+              <MapPinIcon className="h-7 w-7 text-blue-500 bg-slate-300 p-1 rounded-full" />
+              <LinkIcon className="h-7 w-7 text-blue-500 bg-slate-300 p-1 rounded-full" />
+            </div>
           </div>
           {/* item one end */}
           {/* item two start */}
