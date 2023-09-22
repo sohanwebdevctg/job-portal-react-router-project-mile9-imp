@@ -2,10 +2,11 @@
 import React from 'react';
 import './Banner.css'
 
-const Banner = () => {
+// eslint-disable-next-line react/prop-types
+const Banner = ({children}) => {
   return (
-    <div>
-      <h1>this is banner section</h1>
+    <div className='md:container md:mx-auto'>
+    {children}
     </div>
   );
 };
