@@ -7,7 +7,7 @@ import Footer from './../Footer/Footer';
 
 const Root = () => {
   return (
-    <div>
+    <div className='bg-black'>
       {/* header section start */}
         <Header></Header>
       {/* header section end */}
