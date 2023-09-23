@@ -11,6 +11,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Details from './components/Details/Details';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
       {
         path : '/appliedJobs',
         element : <AppliedJobs></AppliedJobs>
+      },
+      {
+        path : '/details/:detailsId',
+        element : <Details></Details>,
+        loader : ({params}) => fetch(`http://localhost:5173/details/${params.detailsId}`)
       },
       {
         path : '/statistics',

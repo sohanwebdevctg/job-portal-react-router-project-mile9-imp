@@ -30,7 +30,7 @@ const Features = () => {
       {/* features section start */}
       <div className='grid grid-cols-1 md:grid-cols-2 md:gap-8'>
         {
-          features.map((feature) => <Feature
+          features.slice(0,4).map((feature) => <Feature
           key={feature.id}
           feature={feature}
           ></Feature>)
