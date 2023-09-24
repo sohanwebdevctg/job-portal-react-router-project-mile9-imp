@@ -6,12 +6,12 @@ import Home from './components/Home/Home';
 import AppliedJobs from './components/AppliedJobs/AppliedJobs';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+import Details from './components/Details/Details';
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Details from './components/Details/Details';
 
 const router = createBrowserRouter([
   {
@@ -20,16 +20,17 @@ const router = createBrowserRouter([
     children : [
       {
         path : '/',
-        element : <Home></Home>
-      },
-      {
-        path : '/appliedJobs',
-        element : <AppliedJobs></AppliedJobs>
+        element : <Home></Home>,
+        loader : () => fetch('features.json')
       },
       {
         path : '/details/:detailsId',
         element : <Details></Details>,
         loader : ({params}) => fetch(`http://localhost:5173/details/${params.detailsId}`)
+      },
+      {
+        path : '/appliedJobs',
+        element : <AppliedJobs></AppliedJobs>
       },
       {
         path : '/statistics',
