@@ -15,11 +15,11 @@ const Rechart = () => {
   ];
 
   return (
-    <div className='md:container md:mx-auto md:mt-8 md:mb-12'>
+    <div className='md:container md:mx-auto mt-20 mb-12'>
       {/* title section start */}
       <div className='text-center md:mb-10'>
         <div>
-          <h1 className='text-white text-5xl'>Rechart Views</h1>
+          <h1 className='text-white md:text-5xl text-3xl'>Rechart Views</h1>
           <p className='text-gray-400 text-lg md:pt-3'><i>Explore thousands of job opportunities with all the information you need. Its your future</i></p>
         </div>
       </div>
@@ -54,14 +54,14 @@ const Rechart = () => {
         {/* mobile chart start */}
         <div className='md:hidden'>
         <ComposedChart
-          width={500}
-          height={400}
+          width={320}
+          height={350}
           data={data}
           margin={{
             top: 20,
             right: 20,
             bottom: 20,
-            left: 20,
+            left: 1,
           }}
         >
           <CartesianGrid stroke="#f5f5f5" />

@@ -30,9 +30,7 @@ const Statistics = () => {
       </div>
       {/* rechart banner section end */}
       {/* rechart section start */}
-      <div className='hidden'>
       <Rechart></Rechart>
-      </div>
       {/* rechart section end */}
     </div>
   );
