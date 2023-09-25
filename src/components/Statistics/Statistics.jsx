@@ -5,10 +5,14 @@ import './Statistics.css'
 import Lottie from "lottie-react";
 import Chart from "../../assets/images/chart.json"
 import Rechart from '../Rechart/Rechart';
+import { useNavigation } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 const Statistics = () => {
+  const navigation = useNavigation();
   return (
     <div>
+      {navigation.state === 'loading' ? <Loading></Loading> : ''}
       {/* rechart banner section start */}
       <div className='h-screen md:container md:mx-auto'>
       {/* banner section start */}

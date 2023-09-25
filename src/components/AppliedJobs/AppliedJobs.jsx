@@ -1,13 +1,17 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import './AppliedJobs.css'
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import { getData, removersData, deleteAllData, } from '../../localstorage/localstorage';
 import Item from '../Item/Item';
+import Loading from './../Loading/Loading';
 
 const AppliedJobs = () => {
   //my data
   const data = useLoaderData();
+  const navigation = useNavigation();
+
+  {navigation.state === 'loading' ? <Loading></Loading> : ''}
   //new data
   const [localData, setLocalData] = useState([]);
   

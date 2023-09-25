@@ -2,10 +2,16 @@
 import React from 'react';
 import Lottie from "lottie-react";
 import BlogChart from "../../assets/images/blog.json"
+import { useNavigation } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 const Blog = () => {
+  const navigation = useNavigation();
+
+  
   return (
     <div className='md:container md:mx-auto'>
+      {navigation.state === 'loading' ? <Loading></Loading> : ''}
       {/* blog section start */}
       <div className='h-100vh  md:pt-20 md:pb-5'>
         <div className="grid md:grid-cols-2 grid-cols-1 md:items-center md:gap-20 md:h-100vh md:pt-8">

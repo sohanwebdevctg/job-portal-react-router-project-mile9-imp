@@ -1,11 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import './Details.css';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useNavigation, useParams } from 'react-router-dom';
 import { addData } from '../../localstorage/localstorage';
+import Loading from '../Loading/Loading';
 
 
 const Details = () => {
+  const navigation = useNavigation();
+
+  
   //fifth set single data
   const [datas,setDatas] = useState({})
   // first get id
@@ -29,6 +33,7 @@ const Details = () => {
 
   return (
     <div className='md:container md:mx-auto'>
+      {navigation.state === 'loading' ? <Loading></Loading> : ''}
       <div className='md:h-screen flex justify-center items-center text-center'>
       {/* description section start */}
         <div>

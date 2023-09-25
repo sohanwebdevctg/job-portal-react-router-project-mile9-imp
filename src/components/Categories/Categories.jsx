@@ -2,10 +2,15 @@
 import React, { useEffect, useState } from 'react';
 import './Categories.css';
 import Category from '../Category/Category';
+import { useNavigation } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 const Categories = () => {
   //data store
   const [categories,setCategories] = useState([])
+  const navigation = useNavigation();
+
+  {navigation.state === 'loading' ? <Loading></Loading> : ''}
   //data loading
   useEffect(() => {
     fetch('categories.json')

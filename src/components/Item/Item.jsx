@@ -2,10 +2,14 @@
 import React from 'react';
 import './Item.css'
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
-import { Link} from 'react-router-dom';
+import { Link, useNavigation} from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 // eslint-disable-next-line react/prop-types
 const Item = ({item,deleteData}) => {
+  const navigation = useNavigation();
+
+  {navigation.state === 'loading' ? <Loading></Loading> : ''}
 
   // eslint-disable-next-line react/prop-types
   const {id,comp_logo,comp_name,job_title,comp_location,salary,job_type,quantity} = item;

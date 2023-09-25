@@ -4,10 +4,14 @@ import './Home.css';
 import Categories from '../Categories/Categories';
 import Banner from '../Banner/Banner';
 import Feature from './../Feature/Feature';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 const Home = () => {
   const features = useLoaderData();
+  const navigation = useNavigation();
+
+  {navigation.state === 'loading' ? <Loading></Loading> : ''}
 
   //showAll && showLess Btn
   const [show,setShow] = useState(false);
