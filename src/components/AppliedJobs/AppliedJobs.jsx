@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './AppliedJobs.css'
 import { useLoaderData } from 'react-router-dom';
 import { getData } from '../../localstorage/localstorage';
+import Item from '../Item/Item';
 
 const AppliedJobs = () => {
   //my data
@@ -25,7 +26,11 @@ const AppliedJobs = () => {
     setLocalData(newData)
   },[data])
 
-  console.log(localData)
+  //delete data
+  const deleteData = (id) => {
+    console.log(id)
+  }
+
 
   return (
     <div className='md:container md:mx-auto'>
@@ -38,12 +43,17 @@ const AppliedJobs = () => {
         </div>
       {/* description section end */}
       </div>
-      {/* details section start */}
-        
-      {/* details section end */}
-      <div>
-
+      {/* items section start */}
+      <div className='grid grid-cols-1 md:mb-10'>
+        {
+          localData.map((item) => <Item
+          key={item.id}
+          item={item}
+          deleteData={deleteData}
+          ></Item>)
+        }
       </div>
+      {/* items section end */}
     </div>
   );
 };
