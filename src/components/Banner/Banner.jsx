@@ -7,7 +7,7 @@ import JobPortal from "../../assets/images/jobPortal.json"
 // eslint-disable-next-line react/prop-types
 const Banner = () => {
   return (
-    <div className='min-h-[calc(100vh-100px)] bg-black md:container md:mx-auto'>
+    <div className='h-screen bg-black md:container md:mx-auto'>
       {/* banner section start */}
       <div className="grid md:grid-cols-2 grid-cols-1 md:items-center md:gap-20 md:h-100vh pt-8 text-center md:text-left">
         <div>

@@ -16,21 +16,23 @@ const Statistics = () => {
       {/* rechart banner section start */}
       <div className='h-screen md:container md:mx-auto'>
       {/* banner section start */}
-      <div className="grid md:grid-cols-2 grid-cols-1 md:items-center md:gap-20 md:h-100vh md:pt-20">
+      <div className="grid md:grid-cols-2 grid-cols-1 md:items-center md:gap-20 md:h-screen pt-8 text-center md:text-left">
         <div>
-          <p className='text-white md:text-5xl'>This is<br></br>the new<br></br><span className='text-gray-400 md:font-semibold'>Job Portal</span></p>
+          <p className='text-white md:text-5xl text-3xl'>This is<br></br>the new<br></br><span className='text-gray-400 md:font-semibold'>Job Portal</span></p>
           <p className='text-gray-500 md:my-4 text-xl'>Explore thousands of job opportunities with all the<br></br>information you need. Its your future. Come find it. Manage all<br></br>your job application from start to finish.</p>
-          <button className='bg-gray-400 text-white md:py-2 md:px-4 rounded md:font-bold'>Click Here</button>
+          <button className='bg-gray-400 text-white py-2 px-4 rounded font-bold mt-1'>Click Here</button>
         </div>
         <div className='overflow-hidden'>
           <Lottie animationData={Chart} loop={true} />
         </div>
       </div>
       {/* banner section end */}
-    </div>
+      </div>
       {/* rechart banner section end */}
       {/* rechart section start */}
+      <div className='hidden'>
       <Rechart></Rechart>
+      </div>
       {/* rechart section end */}
     </div>
   );
