@@ -10,7 +10,7 @@ const ErrorPage = () => {
   const navigate = useNavigate()
 
   return (
-    <div className='bg-black'>
+    <div className='bg-black h-screen flex items-center justify-center'>
       <div className='md:container md:mx-auto'>
       <div className='md:h-screen flex justify-center items-center text-center'>
       {/* description section start */}
@@ -20,7 +20,7 @@ const ErrorPage = () => {
           <p className='text-gray-500 md:my-4 md:text-2xl'>
             <i>{error.statusText || error.message}</i>
           </p>
-          <button onClick={() => {navigate(-1)}} className='bg-gray-400 text-white md:py-2 md:px-4 rounded md:font-bold'>Back</button>
+          <button onClick={() => {navigate(-1)}} className='bg-gray-400 text-white py-2 px-6 rounded md:font-bold'>Back</button>
         </div>
       {/* description section end */}
       </div>
