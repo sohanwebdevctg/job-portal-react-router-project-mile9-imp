@@ -7,6 +7,7 @@ import Feature from './../Feature/Feature';
 import { useLoaderData, useNavigation } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 
+
 const Home = () => {
   const features = useLoaderData();
   const navigation = useNavigation();
@@ -53,6 +54,7 @@ const Home = () => {
       {/* show Btn end */}
       </div>
       {/* features section end */}
+
     </div>
   );
 };

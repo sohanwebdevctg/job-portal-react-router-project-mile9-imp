@@ -5,6 +5,8 @@ import { useLoaderData, useNavigation } from 'react-router-dom';
 import { getData, removersData, deleteAllData, } from '../../localstorage/localstorage';
 import Item from '../Item/Item';
 import Loading from './../Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const AppliedJobs = () => {
   //my data
@@ -34,12 +36,14 @@ const AppliedJobs = () => {
   //delete data
   const deleteData = (id) => {
     const newValue = localData.filter(value => value.id !== id);
+    toast('delete this data')
     setLocalData(newValue)
     removersData(id)
   }
 
   //delete local data
   const deleteFullData = () => {
+    toast('clear all data')
     setLocalData([]);
     deleteAllData()
   }
@@ -58,6 +62,7 @@ const AppliedJobs = () => {
 
   return (
     <div className='md:container md:mx-auto'>
+      <ToastContainer />
       <div className='h-screen flex justify-center items-center text-center'>
       {/* description section start */}
         <div>

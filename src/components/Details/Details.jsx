@@ -4,6 +4,9 @@ import './Details.css';
 import { useLoaderData, useNavigation, useParams } from 'react-router-dom';
 import { addData } from '../../localstorage/localstorage';
 import Loading from '../Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Details = () => {
@@ -26,13 +29,14 @@ const Details = () => {
 
   //add localStorage
   const localStorage = (id) => {
-    alert('added data')
+    toast('added data')
     addData(id);
   }
 
 
   return (
     <div className='md:container md:mx-auto'>
+      <ToastContainer />
       {navigation.state === 'loading' ? <Loading></Loading> : ''}
       <div className='md:h-screen flex justify-center items-center text-center py-2'>
       {/* description section start */}
@@ -72,6 +76,7 @@ const Details = () => {
       <div>
 
       </div>
+
     </div>
   );
 };
