@@ -27,9 +27,9 @@ const Home = () => {
       {/* features section start */}
       <div className='md:container md:mx-auto md:mt-8 md:mb-12'>
       {/* title section start */}
-      <div className='text-center md:mb-10'>
+      <div className='text-center md:mb-10 my-6 md:my-0'>
         <div>
-          <h1 className='text-white text-5xl'>Features Jobs</h1>
+          <h1 className='text-white md:text-5xl text-3xl'>Features Jobs</h1>
           <p className='text-gray-400 text-lg md:pt-3'><i>Explore thousands of job opportunities with all the information you need. Its your future</i></p>
         </div>
       </div>
@@ -45,9 +45,9 @@ const Home = () => {
       </div>
       {/* features section end */}
       {/* show Btn start */}
-      <div className='text-center md:mt-12 md:mb-6'>
+      <div className='text-center mt-12 mb-8'>
       {
-        show ? (<span className='bg-gray-400 text-white md:p-3 rounded md:text-xl md:font-bold' onClick={() => setShow(false)}><button>show Less</button></span>) : (<span className="bg-gray-400 text-white md:p-3 rounded md:text-xl md:font-bold" onClick={() => setShow(true)}><button>show All</button></span>)
+        show ? (<span className='bg-gray-400 text-white p-3 rounded text-xl font-bold' onClick={() => setShow(false)}><button>show Less</button></span>) : (<span className="bg-gray-400 text-white p-3 rounded text-xl font-bold" onClick={() => setShow(true)}><button>show All</button></span>)
       }
       </div>
       {/* show Btn end */}
