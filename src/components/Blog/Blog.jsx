@@ -29,7 +29,7 @@ const Blog = () => {
       {/* details section start */}
       <div className='md:container md:mx-auto text-center md:py-10'>
         {/* title section start */}
-        <div className='grid grid-cols-1 mt-40 md:py-5'>
+        <div className='grid grid-cols-1 mt-40 md:mt-0 md:py-5'>
         <h1 className='text-white md:text-5xl text-3xl'>Job Category List</h1>
           <p className='text-gray-400 text-lg md:pt-3'><i>Explore thousands of job opportunities with all the information you need. Its your future</i></p>
         </div>
