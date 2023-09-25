@@ -13,24 +13,24 @@ const Blog = () => {
     <div className='md:container md:mx-auto'>
       {navigation.state === 'loading' ? <Loading></Loading> : ''}
       {/* blog section start */}
-      <div className='h-100vh  md:pt-20 md:pb-5'>
-        <div className="grid md:grid-cols-2 grid-cols-1 md:items-center md:gap-20 md:h-100vh md:pt-8">
+      <div className='h-screen  md:pt-20 md:pb-5'>
+        <div className="grid md:grid-cols-2 grid-cols-1 md:items-center md:gap-20 gap-10 md:h-100vh pt-8 text-center md:text-left">
           <div>
-            <p className='text-white md:text-5xl'>Blog<br></br>Items & Them<br></br><span className='text-gray-400 md:font-semibold'>Job Portal</span></p>
+            <p className='text-white md:text-5xl text-3xl'>Blog<br></br>Items & Them<br></br><span className='text-gray-400 md:font-semibold'>Job Portal</span></p>
             <p className='text-gray-500 md:my-4 text-xl'>Explore thousands of job opportunities with all the<br></br>information you need. Its your future. Come find it. Manage all<br></br>your job application from start to finish.</p>
-            <button className='bg-gray-400 text-white md:py-2 md:px-4 rounded md:font-bold'>Click Here</button>
+            <button className='bg-gray-400 text-white py-2 md:px-4 px-2 rounded md:font-bold mt-1'>Click Here</button>
           </div>
-          <div className='overflow-hidden'>
+          <div className='overflow-hidden p-2'>
             <Lottie animationData={BlogChart} loop={true} />
           </div>
         </div>
       </div>
       {/* blog section end */}
       {/* details section start */}
-      <div className='container mx-auto text-center md:py-10'>
+      <div className='md:container md:mx-auto text-center md:py-10'>
         {/* title section start */}
-        <div className='grid grid-cols-1 py-2 md:py-5'>
-        <h1 className='text-white text-5xl'>Job Category List</h1>
+        <div className='grid grid-cols-1 mt-40 md:py-5'>
+        <h1 className='text-white md:text-5xl text-3xl'>Job Category List</h1>
           <p className='text-gray-400 text-lg md:pt-3'><i>Explore thousands of job opportunities with all the information you need. Its your future</i></p>
         </div>
         {/* title section end */}
