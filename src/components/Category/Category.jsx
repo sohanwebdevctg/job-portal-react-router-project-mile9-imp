@@ -4,6 +4,7 @@ import './Category.css'
 import { useNavigation } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 
+// eslint-disable-next-line react/prop-types
 const Category = ({category}) => {
   const navigation = useNavigation();
 

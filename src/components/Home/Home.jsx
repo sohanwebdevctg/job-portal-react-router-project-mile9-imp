@@ -35,7 +35,7 @@ const Home = () => {
       </div>
       {/* title section end */}
       {/* features section start */}
-      <div className='grid grid-cols-1 md:grid-cols-2 md:gap-8'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
         {
           features.slice(0,show ? 10 : 4).map((feature) => <Feature
           key={feature.id}
