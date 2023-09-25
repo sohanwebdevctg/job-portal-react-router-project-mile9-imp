@@ -28,7 +28,8 @@ const AppliedJobs = () => {
 
   //delete data
   const deleteData = (id) => {
-    console.log(id)
+    const newValue = localData.filter(value => value.id !== id);
+    setLocalData(newValue)
   }
 
 
