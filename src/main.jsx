@@ -12,11 +12,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path : '/',
     element : <Root></Root>,
+    errorElement : <ErrorPage></ErrorPage>,
     children : [
       {
         path : '/',
@@ -40,10 +42,6 @@ const router = createBrowserRouter([
       {
         path : '/blog',
         element : <Blog></Blog>
-      },
-      {
-        path : '*',
-        element : <h1>404 page not found</h1>
       }
     ]
   }

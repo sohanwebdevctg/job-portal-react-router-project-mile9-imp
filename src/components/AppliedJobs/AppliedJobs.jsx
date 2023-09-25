@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './AppliedJobs.css'
 import { useLoaderData } from 'react-router-dom';
-import { getData } from '../../localstorage/localstorage';
+import { getData, removersData, deleteAllData, } from '../../localstorage/localstorage';
 import Item from '../Item/Item';
 
 const AppliedJobs = () => {
@@ -26,10 +26,29 @@ const AppliedJobs = () => {
     setLocalData(newData)
   },[data])
 
+
   //delete data
   const deleteData = (id) => {
     const newValue = localData.filter(value => value.id !== id);
     setLocalData(newValue)
+    removersData(id)
+  }
+
+  //delete local data
+  const deleteFullData = () => {
+    setLocalData([]);
+    deleteAllData()
+  }
+
+  //job type
+  const jobType1 = (value) => {
+    const data = localData.filter(v => v.job_time === value)
+      setLocalData(data)
+  }
+  const jobType2 = (value) => {
+    const data = localData.filter(v => v.job_time === value)
+      setLocalData(data)
+    
   }
 
 
@@ -45,16 +64,34 @@ const AppliedJobs = () => {
       {/* description section end */}
       </div>
       {/* items section start */}
-      <div className='grid grid-cols-1 md:mb-10'>
+      <div>
+        <div className='flex justify-end gap-5'>
         {
-          localData.map((item) => <Item
-          key={item.id}
-          item={item}
-          deleteData={deleteData}
-          ></Item>)
+        localData.length > 0 ? (<span onClick={() => {jobType1('remote')}} className='bg-gray-400 text-white md:p-3 rounded md:text-xl md:font-bold'><button>Remote</button></span>) : ('')
         }
+        {
+        localData.length > 0 ? (<span onClick={() => {jobType2('full')}} className='bg-gray-400 text-white md:p-3 rounded md:text-xl md:font-bold'><button>Full Time</button></span>) : ('')
+        }
+        </div>
+      
+        <div className='grid grid-cols-1 md:mb-10'>
+          {
+            localData.map((item) => <Item
+            key={item.id}
+            item={item}
+            deleteData={deleteData}
+            ></Item>)
+          }
+        </div>
       </div>
       {/* items section end */}
+      {
+        localData.length > 0 ? (<div className='text-center md:mt-6 md:mb-12'>
+        <span onClick={deleteFullData} className='bg-gray-400 text-white md:p-3 rounded md:text-xl md:font-bold'>
+          <button>Clear All</button>
+        </span>
+      </div>) : ('')
+      }
     </div>
   );
 };

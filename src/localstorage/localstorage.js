@@ -30,6 +30,21 @@ const getData = () => {
   return shoppingCart;
 }
 
+const removersData = (id) => {
+  const storeCart = localStorage.getItem('shopping-cart');
+  if(storeCart){
+    const shoppingCart = JSON.parse(storeCart)
+    if(id in shoppingCart){
+      delete shoppingCart[id]
+      localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart))
+    }
+  }
+}
 
 
-export {addData, getData}
+const deleteAllData = () => {
+  localStorage.removeItem('shopping-cart')
+}
+
+
+export {addData, getData, removersData,deleteAllData}
