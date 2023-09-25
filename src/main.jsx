@@ -8,6 +8,7 @@ import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import Details from './components/Details/Details';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import Loading from './components/Loading/Loading';
 
 import {
   createBrowserRouter,
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path : '/blog',
         element : <Blog></Blog>
+      },
+      {
+        path : '/loading',
+        element : <Loading></Loading>
       }
     ]
   }
