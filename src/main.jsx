@@ -21,16 +21,17 @@ const router = createBrowserRouter([
       {
         path : '/',
         element : <Home></Home>,
-        loader : () => fetch('features.json')
+        loader : () => fetch('/features.json')
       },
       {
-        path : '/details/:detailsId',
+        path : '/details/:id',
         element : <Details></Details>,
-        loader : ({params}) => fetch(`http://localhost:5173/details/${params.detailsId}`)
+        loader : () => fetch('/features.json')
       },
       {
         path : '/appliedJobs',
-        element : <AppliedJobs></AppliedJobs>
+        element : <AppliedJobs></AppliedJobs>,
+        loader : () => fetch('/features.json')
       },
       {
         path : '/statistics',
