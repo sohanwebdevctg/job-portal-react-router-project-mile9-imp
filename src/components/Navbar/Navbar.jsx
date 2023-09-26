@@ -10,7 +10,7 @@ const Navbar = () => {
     <div>
       {/* desktop section start */}
       <div className='md:fixed md:top-0 md:z-20 md:w-full hidden md:flex bg-blue-700'>
-        <nav className='container mx-auto flex justify-between items-center h-20'>
+        <nav className='container mx-auto flex justify-between items-center md:h-20'>
           <div>
             <NavLink to="/">
             <h1 className='text-slate-200 font-extrabold text-2xl'><i>JobPortal</i></h1>
@@ -28,7 +28,7 @@ const Navbar = () => {
       {/* desktop section end */}
       {/* mobile section start */}
       <div className='bg-blue-700'>
-        <nav className='flex  justify-between items-center h-24 mx-2'>
+        <nav className='flex  justify-between items-center h-20 mx-2'>
           <div>
               <NavLink to="/">
               <h1 className='text-slate-300 font-bold text-xl'><i>JobPortal</i></h1>
@@ -40,7 +40,7 @@ const Navbar = () => {
             }
           </div>
         </nav>
-        <div className={`absolute w-full ${showBtn ? 'top-24' : '-top-52'} duration-700 bg-blue-700`}>
+        <div className={`absolute w-full ${showBtn ? 'top-20' : '-top-52'} duration-700 bg-blue-700`}>
             <NavLink to="/" className={({isActive}) => isActive ? 'text-gray-400 font-semibold block text-center py-3' : 'text-white font-semibold block text-center py-3'}>Home</NavLink>
             <NavLink to="/appliedJobs" className={({isActive}) => isActive ? 'text-gray-400 font-semibold block text-center py-3' : 'text-white font-semibold block text-center py-3'}>Applied Jobs</NavLink>
             <NavLink to="/statistics" className={({isActive}) => isActive ? 'text-gray-400 font-semibold block text-center py-3' : 'text-white font-semibold block text-center py-3'}>Statistics</NavLink>
