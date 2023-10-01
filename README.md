@@ -6,4 +6,4 @@
 * ### this project are local host data in public file
 * ### link in this project
   [github](https://github.com/sohanwebdevctg/job-portal-react-router-project-mile9-imp)
-  [netlify](https://65123d0d31a40e175b39ffa8--guileless-churros-b2e014.netlify.app/)
+  [netlify](https://65123e7f12132c17992718e3--guileless-churros-b2e014.netlify.app/)
